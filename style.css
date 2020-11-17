@@ -1,0 +1,81 @@
+:root{
+    --red-rt: rgba(129, 19, 19, 0.76);
+}
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+h1{
+    color: white;
+    font-size: 25px;
+    margin: 0;
+}
+hr{
+    border-top: 1px double ;
+}
+.card{
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(129, 19, 19, 0.76);
+    width: 350px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.input{
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    height: 35px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.button{
+    font-weight: 900;
+    font-size: 20px;
+    display: block;
+    height: 35px;
+    width: 100%;
+    margin: 20px 0px;
+    box-sizing: border-box;
+}
+
+.button:hover{
+    background-color: var(--red-rt);
+    color: white;
+    transition-duration: 500ms;
+}
+
+::placeholder{
+    font-weight: 700;
+    text-align: center;
+}
+
+.divResultado{
+    display: none;
+    text-align: center;
+    color: white;
+    margin: auto;
+}
+
+.item{
+    text-align: left;
+}
+table{
+    width: 100%;
+    margin: auto;
+}
