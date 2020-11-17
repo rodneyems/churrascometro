@@ -1,4 +1,7 @@
 function calcular(){
+    let fatorMultiplicador = 0
+    let fatorMultiplicadorCarne = 0
+    let unMedida = ""
     let adultos = document.getElementById("adulto").value
     let criancas = document.getElementById("crianca").value
     let duracao = document.getElementById("duracao").value * 60
@@ -12,7 +15,7 @@ function calcular(){
     let totalAlimento = (((450 * adultos) + (200 * criancas)) * duracaoMulti) / 1000
     let carne = totalAlimento * 0.4
     let demais = totalAlimento * 0.2
-    let paoAlho = (Number(adultos) + Number(criancas)) * 1.5
+    let paoAlho = (Number(adultos) + Number(criancas)) * 0.7 * duracaoMulti
 
     let divResultado = document.getElementsByClassName("divResultado")[0]
     let qntCarne = document.getElementById("qntCarne")
@@ -23,10 +26,32 @@ function calcular(){
 
     divResultado.style.display = "block";
 
-    qntCarne.innerHTML = carne.toFixed(2) + " KG"
-    qntLing.innerHTML = demais.toFixed(2) + " KG"
-    qntPanc.innerHTML = demais.toFixed(2) + " KG"
-    qntFrango.innerHTML = demais.toFixed(2) + " KG"
-    qntPao.innerHTML = Math.ceil(paoAlho.toFixed(2)) + " Un"
+
+
+    if ( demais < 0.9 ){
+        demais *= 1000
+        unMedida = " g"
+        fatorMultiplicador = 100
+    }else{
+        fatorMultiplicador = 0.5
+        unMedida = " kg"
+    }
+
+    if ( carne < 0.9 ){
+        carne *= 1000
+        unMedidaCarne = " g"
+        fatorMultiplicadorCarne = 100
+    }else{
+        fatorMultiplicadorCarne = 0.5
+        unMedidaCarne = " kg"
+    }
+
+    demaisCarnes = Math.round(demais / fatorMultiplicador) * fatorMultiplicador + unMedida
+    
+    qntCarne.innerHTML = Math.round(carne / fatorMultiplicadorCarne) * fatorMultiplicadorCarne + unMedidaCarne
+    qntLing.innerHTML = demaisCarnes
+    qntPanc.innerHTML = demaisCarnes
+    qntFrango.innerHTML = demaisCarnes
+    qntPao.innerHTML = Math.ceil(paoAlho) + " un"
 
 }
