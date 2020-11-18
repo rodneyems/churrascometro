@@ -23,6 +23,8 @@ function calcular(){
     let qntPanc = document.getElementById("qntPanc")
     let qntFrango = document.getElementById("qntFrango")
     let qntPao = document.getElementById("qntPao")
+    let qntBeer = document.getElementById("qntBeer")
+    let qntCoke = document.getElementById("qntCoke")
 
     divResultado.style.display = "block";
 
@@ -53,5 +55,6 @@ function calcular(){
     qntPanc.innerHTML = demaisCarnes
     qntFrango.innerHTML = demaisCarnes
     qntPao.innerHTML = Math.ceil(paoAlho) + " un"
-
+    qntBeer.innerHTML = Math.round((adultos * 7) * duracaoMulti) + " un"
+    qntCoke.innerHTML = Math.ceil((((Number(adultos) + Number(criancas))) * 600) / 1000) + " L"
 }
