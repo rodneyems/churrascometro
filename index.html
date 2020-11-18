@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Churrascometro</title>
-    <link rel="icon" href="cart.png">
+    <link rel="icon" href="img/fork.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="card">
-        <img src="logo.png" alt="logo">
+        <img src="img/logo.png" alt="logo">
         <hr>
         <h1>CHURRASCOMETRO</h1>
         <hr>
@@ -18,40 +19,72 @@
         <input id="duracao" class="input" type="number" placeholder="Digite a duração em Horas">
         <input class="button" type="submit" onclick="calcular()" value="CALCULAR">
         <hr>
-
+        
         <div class="divResultado">
-            <table>
-                <tr>
-                    <th>ITEM</th>
-                    <th>QUANTIDADE</th>
-                </tr>
-                <tr>
-                    <td class="item">CARNE</td>
-                    <td id="qntCarne"></td>
-                </tr>
-    
-                <tr>
-                    <td>LINGUIÇA</td>
-                    <td id="qntLing"></td>
-                </tr>
-                
-                <tr>
-                    <td>PANCETA</td>
-                    <td id="qntPanc"></td>
-                </tr>
-                
-                <tr>
-                    <td>FRANGO</td>
-                    <td id="qntFrango"></td>
-                </tr>
-                
-                <tr>
-                    <td>PÃO DE ALHO</td>
-                    <td id="qntPao"></td>
-                </tr>
-            </table>
-            
+        <div class="item">
+            <img class="iconFood" src="img/steak.png" alt="carne">
+            <div class="typeFood">
+                CARNE
+            </div>
+            <div class="qntFood" id="qntCarne">
+                <!-- Quantidade -->
+            </div>
         </div>
+        <div class="item">
+            <img class="iconFood" src="img/sausage.png" alt="carne">
+            <div class="typeFood">
+                LINGUIÇA
+            </div>
+            <div class="qntFood" id="qntLing">
+                <!-- Quantidade -->
+            </div>
+        </div>
+        <div class="item">
+            <img class="iconFood" src="img/chicken.png" alt="carne">
+            <div class="typeFood">
+                FRANGO
+            </div>
+            <div class="qntFood" id="qntFrango">
+                <!-- Quantidade -->
+            </div>
+        </div>
+        <div class="item">
+            <img class="iconFood" src="img/pig.png" alt="carne">
+            <div class="typeFood">
+                PANCETA
+            </div>
+            <div class="qntFood" id="qntPanc">
+                <!-- Quantidade -->
+            </div>
+        </div>
+        <div class="item">
+            <img class="iconFood" src="img/appetizer.png" alt="carne">
+            <div class="typeFood">
+                PAO DE ALHO
+            </div>
+            <div class="qntFood" id="qntPao">
+                <!-- Quantidade -->
+            </div>
+        </div>
+        <div class="item">
+            <img class="iconFood" src="img/beer.png" alt="carne">
+            <div class="typeFood">
+                CERVEJA
+            </div>
+            <div class="qntFood" id="qntBeer">
+                <!-- Quantidade -->
+            </div>
+        </div>
+        <div class="item">
+            <img class="iconFood" src="img/coke.png" alt="carne">
+            <div class="typeFood">
+                Refrigerante
+            </div>
+            <div class="qntFood" id="qntCoke">
+                <!-- Quantidade -->
+            </div>
+        </div>
+        <p>Feito por Rodney Martins</p>
     </div>
 
     <script src="scripts.js"></script>

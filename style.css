@@ -1,88 +1,135 @@
+
 :root{
-    --red-rt: rgba(129, 19, 19, 0.76);
+    --red-rt: rgba(129, 19, 19, 0.829);
 }
 
 *{
+    padding: 0px;
+    margin: 0px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
+
 body{
-    background-image: url("bg.jpg");
+    display: grid;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url("img/bgBody.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-color: black;
+    box-sizing: content-box;
 }
 h1{
+    margin: 0;
     color: white;
     font-size: 25px;
-    margin: 0;
 }
 hr{
-    border-top: 1px double ;
+    margin: 10px;
+    border-top: 2px double ;
 }
+
 .card{
-    position: absolute;
-    right: 50%;
-    top: 50%;
-    transform: translate(50%, -50%);
-    text-align: center;
-    padding: 40px;
-    background-color: var(--red-rt);
+    position: relative;
+    margin: 1vh auto;
+    padding: 30px;
     width: 350px;
-    overflow: hidden;
-    box-sizing: border-box;
     border-radius: 10px;
+    background-image: url("img/bgTable2.jpg");
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .input{
-    font-weight: 700;
-    text-align: center;
-    display: block;
     height: 35px;
     width: 100%;
     margin-top: 20px;
     margin-bottom: 10px;
     box-sizing: border-box;
+    background-image: url("img/bgInput.jpg");
+    background-position: 50px;
+    border-radius: 20px;
+    display: block;
+    font-size: 16px;
+    color: black;
+    font-weight: 700;
+    text-align: center;
 }
 
 .button{
-    font-weight: 900;
-    font-size: 20px;
     display: block;
     height: 35px;
     width: 100%;
     margin: 20px 0px;
+    background-position: 50px;
+    background-image: url("img/bgInput.jpg");
+    border-radius: 20px;
     box-sizing: border-box;
+    font-weight: 900;
+    font-size: 20px;
 }
 
 .button:hover{
-    background-color: var(--red-rt);
     color: whitesmoke;
     transition-duration: 500ms;
 }
 
 ::placeholder{
-    font-weight: 700;
     text-align: center;
+    font-weight: 800;
+    color: black;
 }
 
 .divResultado{
     display: none;
-    text-align: center;
-    color: white;
-    margin: auto;
 }
 
-td:first-child, th:first-child{
-    text-align: left;
-}
-table{
+
+.item{
+    background-image: url("img/bgInput.jpg");
+    background-position: 50px;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 20px;
     width: 100%;
-    margin: auto;
+    background-color: blanchedalmond;
+    height: 35px;
+    color: black;
+    font-weight: 600;
+}
+
+.iconFood{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    left: 10px
+}
+.typeFood{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
 
 }
-tr:nth-child(even){
-    background-color: var(--red-rt);
+.qntFood{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: inline-block;
 }
-tr:nth-child(odd){
-    background-color:  rgba(158, 52, 52, 0.726);
+
+p{
+    font-size: 10px;
+    width: 100%;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    color: rgb(204, 109, 109);
 }
